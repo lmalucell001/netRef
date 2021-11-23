@@ -6,7 +6,6 @@ import Header from "components/Header";
 // Exercices
 import FirstComponentExercice from 'exercices/FirstComponent'
 import StylingComponentsExercice from 'exercices/StylingComponents'
-import SpotifyExercice from 'exercices/Spotify'
 import ContextsExercice from 'exercices/Contexts'
 
 function App() {
@@ -19,9 +18,6 @@ function App() {
         </Route>
         <Route path="/styling-components">
           <StylingComponentsExercice />
-        </Route>
-        <Route path="/spotify">
-          <SpotifyExercice />
         </Route>
         <Route path="/contexts">
           <ContextsExercice />

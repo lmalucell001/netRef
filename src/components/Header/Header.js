@@ -22,9 +22,6 @@ const Header = () => {
         <li>
           <Link to="/contexts" className={styles.menuItem}>Contexts</Link>
         </li>
-        <li>
-          <Link to="/spotify" className={styles.menuItem}>Spotify</Link>
-        </li>
       </ul>
     </div>
   )
