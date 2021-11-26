@@ -56,6 +56,12 @@ const Upload = () => {
       };
     }
   
+
+
+    // className={`upload${
+    //   highlight ? "isHighlight" : drop ?  "isDrop" : ""
+    // }`}
+
     return ( 
       <>
         <div
@@ -63,9 +69,7 @@ const Upload = () => {
           onDragLeave={(e) => handleLeave(e)}
           onDragOver={(e) => handleOver(e)}
           onDrop={(e) => handleUpload(e)}
-          className={`upload${
-            highlight ? "isHighlight" : drop ?  "isDrop" : ""
-          }`}
+          className={styles.upload.isDrop}
           style={{ backgroundImage: `url(${preview})` }}
         >
           <form class="my-form">
