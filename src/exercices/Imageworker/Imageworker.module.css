@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.subContainer{
+    display: block;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+    border-radius: 20%;
+}
+.frame1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 200px;
+    height: 200px;
+    background-color:chartreuse;
+    border-radius: 20%;
+}
+
+.image{
+    border-radius: 20%;
+}
+
+/* .coucou {
+    background-color: blue;
+} */

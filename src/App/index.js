@@ -6,6 +6,7 @@ import Header from "components/Header";
 // Exercices
 import FirstComponentExercice from 'exercices/FirstComponent'
 import StylingComponentsExercice from 'exercices/StylingComponents'
+import Grille from "../exercices/Imageworker";
 import ContextsExercice from 'exercices/Contexts'
 import Uploader from 'exercices/Uploader'
 
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route exact path="/">
           404
+        </Route>
+        <Route exact path="/imageworker">
+          <Grille />
         </Route>
         
       </Switch>
