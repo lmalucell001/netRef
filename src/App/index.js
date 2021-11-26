@@ -7,24 +7,35 @@ import Header from "components/Header";
 import FirstComponentExercice from 'exercices/FirstComponent'
 import StylingComponentsExercice from 'exercices/StylingComponents'
 import ContextsExercice from 'exercices/Contexts'
+import Uploader from 'exercices/Uploader'
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/first-component">
+        <Route exact path="/first-component">
           <FirstComponentExercice />
         </Route>
-        <Route path="/styling-components">
+        <Route exact path="/styling-components">
           <StylingComponentsExercice />
         </Route>
-        <Route path="/contexts">
+        <Route exact path="/contexts">
           <ContextsExercice />
         </Route>
-        <Route path="/">
+        <Route exact path="/hooks">
+          Hooks
+        </Route>
+        <Route exact path="/">
           <FirstComponentExercice />
         </Route>
+        <Route exact path="/uploader">
+          <Uploader />
+        </Route>
+        <Route exact path="/">
+          404
+        </Route>
+        
       </Switch>
     </BrowserRouter>
   );
