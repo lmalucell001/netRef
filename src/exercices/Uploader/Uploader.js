@@ -56,7 +56,7 @@ const Upload = () => {
       };
     }
   
-    return (
+    return ( 
       <>
         <div
           onDragEnter={(e) => handleEnter(e)}
@@ -64,20 +64,23 @@ const Upload = () => {
           onDragOver={(e) => handleOver(e)}
           onDrop={(e) => handleUpload(e)}
           className={`upload${
-            highlight ? " is-highlight" : drop ? " is-drop" : ""
+            highlight ? "isHighlight" : drop ?  "isDrop" : ""
           }`}
           style={{ backgroundImage: `url(${preview})` }}
         >
           <form class="my-form">
             <p>Drag and Drop image here</p>
-            <div className="upload-button">
-              <input
-                type="file"
-                className="upload-file"
-                accept="image/*"
-                onChange={(e) => handleUpload(e)}
-              />
-              <button className="button">Upload Here</button>
+            <div className={styles.uploadButton}>
+            <button className={styles.button}>Upload Here 
+                <input
+                  type="file"
+                  className={styles.uploadFile}
+                  accept="image/*"
+                  onChange={(e) => handleUpload(e)}
+                />
+              </button>
+
+              
             </div>
           </form>
         </div>

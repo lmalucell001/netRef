@@ -1,5 +1,5 @@
-$primary-color: #101010;
-$white: #fff;
+
+
 
 .upload {
   display: flex;
@@ -7,7 +7,7 @@ $white: #fff;
   justify-content: center;
   width: 100%;
   height: 300px;
-  color: $white;
+  color: #fff;
   font-family: "Montserrat";
   background-color: #4aa0ea;
   position: relative;
@@ -22,34 +22,34 @@ $white: #fff;
     transition: opacity 0.25s ease-in-out;
   }
 
-  &.is-highlight {
+  &.isHighlight {
     background-color: rgba(#4aa0ea, 0.5);
 
     p {
-      opacity: 1;
+      opacity: 100; 
     }
   }
 
-  &.is-drop {
+  &.isDrop {
     p {
       opacity: 0;
     }
   }
 }
 
-.upload-button {
+.uploadButton {
   width: 200px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.upload-file {
-  width: 100%;
+.uploadFile {
+  width: 200%;
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 100%;
+  height: 200%;
   opacity: 0;
   cursor: pointer;
 }
@@ -63,10 +63,10 @@ $white: #fff;
   height: 50px;
   font-size: 15px;
   font-weight: bold;
-  color: $white;
+  color: #fff;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: $primary-color;
+  background-color: #101010;
   border: 0;
 }
