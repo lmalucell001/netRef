@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import React from "react";
 
-class Capture extends React.Component{
+/*class Capture extends React.Component{
     onClick(e){
         console.log("ON CLICK, clientX:", e.clientX);
     }
@@ -18,9 +19,7 @@ class Capture extends React.Component{
     }
 }
 
-export default Capture;
-
-
+export default Capture;*/
 
 class Test extends React.Component {
     constructor(){
@@ -33,6 +32,7 @@ class Test extends React.Component {
 
     changeColor(){
        this.setState({black: !this.state.black})
+       console.log("changement")
     }
 
     render(){
@@ -40,10 +40,9 @@ class Test extends React.Component {
 
         return (
              <button className={btn_class} onClick={this.changeColor.bind(this)}>
-                  Button
+                  Button!
              </button>
         )
     }
 }
-
-React.render(<Test />, document.getElementById('container'));
+export default Test;
