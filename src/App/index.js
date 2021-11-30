@@ -9,8 +9,6 @@ import StylingComponentsExercice from 'exercices/StylingComponents'
 import Grille from "../exercices/Imageworker";
 import ContextsExercice from 'exercices/Contexts'
 import Uploader from 'exercices/Uploader'
-import FunctionClick from "../exercices/Classclick";
-import Classclick from "../exercices/Classclick/ClassClick";
 
 function App() {
   return (
@@ -40,8 +38,6 @@ function App() {
         </Route>
         <Route exact path="/imageworker">
           <Grille />
-          <FunctionClick/>
-          <Classclick/>
         </Route>
         
       </Switch>
