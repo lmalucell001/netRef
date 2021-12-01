@@ -34,6 +34,9 @@ const Header = () => {
         <li>
           <Link to="/imageworker" className={styles.menuItem}>Imageworker</Link>
         </li>
+        <li>
+          <Link to="/Setcadre" className={styles.menuItem}>Setcadre</Link>
+        </li>
       </ul>
     </div>
   )

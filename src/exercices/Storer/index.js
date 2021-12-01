@@ -1,5 +1,7 @@
 import React from 'react'
-import styles from './storer.module.css'
+import ReactDOM from 'react-dom';
+
+import styles from './Storer.module.css'
 var localStorageKey = '_dugurlu_recipes';
 
 // write and read with local storage
@@ -165,4 +167,6 @@ class RecipeBox extends React.Component {
   }
 }
 
-ReactDOM.render(<RecipeBox />, app);
+// ReactDOM.render(<RecipeBox />, root);
+
+export default RecipeBox;

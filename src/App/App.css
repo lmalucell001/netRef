@@ -18,13 +18,12 @@ body {
   top: var(--coorY); left: var(--coorX);
 }
 .Applogo {
-    height: 40vmin;
     pointer-events: none;
     position: absolute;
     top: var(--coorY);
     left: var(--coorX);
-    width: 500px;
-    height: 500px;
+    width: 100px;
+    height: 100px;
   }
   
 .Applogo g {
