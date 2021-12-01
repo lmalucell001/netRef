@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/storer" className={styles.menuItem}>Storer</Link>
         </li>
         <li>
-          <Link to="/uploader" className={styles.menuItem}>Uploader</Link>
+          <Link to="/uploaderI" className={styles.menuItem}>UploaderI</Link>
         </li>
         <li>
           <Link to="/imageworker" className={styles.menuItem}>Imageworker</Link>

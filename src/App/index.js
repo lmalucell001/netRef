@@ -8,7 +8,7 @@ import FirstComponentExercice from 'exercices/FirstComponent'
 import StylingComponentsExercice from 'exercices/StylingComponents'
 import Grille from "../exercices/Imageworker";
 import ContextsExercice from 'exercices/Contexts'
-import Uploader from 'exercices/Uploader'
+import UploaderI from 'exercices/UploaderI'
 import Capture from "../exercices/cursorCoordinate";
 
 function App() {
@@ -31,8 +31,8 @@ function App() {
         <Route exact path="/">
           <FirstComponentExercice />
         </Route>
-        <Route exact path="/uploader">
-          <Uploader />
+        <Route exact path="/uploaderI">
+          <UploaderI />
         </Route>
         <Route exact path="/">
           404
