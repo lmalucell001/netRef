@@ -1,0 +1,21 @@
+.dropzone {
+    width : 100vw;
+    height : 100vh;
+    position: fixed;
+    top : 0;
+    left : 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+}
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background-size: 200px ;
+}

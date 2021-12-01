@@ -37,6 +37,9 @@ const Header = () => {
         <li>
           <Link to="/v1" className={styles.menuItem}>V1</Link>
         </li>
+        <li>
+          <Link to="/v2" className={styles.menuItem}>V2</Link>
+        </li>
       </ul>
     </div>
   )

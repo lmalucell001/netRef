@@ -6,27 +6,34 @@ import nalfgas from './mousqueton.jpg';
 
 const Grille= () => {
 const [preview, setPreview] = React.useState("");
+const [preview1, setPreview1] = React.useState("");
     const [drop, setDrop] = React.useState(false);
   
-    const handleEnter = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      console.log("enter!");
+    const handleOver = (f) => {
+      f.preventDefault();
+      f.stopPropagation();
+      console.log("over!");
     };
+
   
-    const handleOver = (e) => {
+    const handleUpload = (f) => {
+      f.preventDefault();
+      f.stopPropagation();
+      console.log("drop!");
+      setDrop(true);
+  
+      const [file] = f.target.files || f.dataTransfer.files;
+  
+      uploadFile(file);
+    };
+
+    const handleOver1 = (e) => {
       e.preventDefault();
       e.stopPropagation();
       console.log("over!");
     };
-  
-    const handleLeave = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      console.log("leave!");
-    };
-  
-    const handleUpload = (e) => {
+
+    const handleUpload1 = (e) => {
       e.preventDefault();
       e.stopPropagation();
       console.log("drop!");
@@ -34,9 +41,24 @@ const [preview, setPreview] = React.useState("");
   
       const [file] = e.target.files || e.dataTransfer.files;
   
-      uploadFile(file);
+      uploadFile1(file);
     };
   
+    function uploadFile1(file) {
+      const reader = new FileReader();
+      reader.readAsBinaryString(file);
+  
+      reader.onload = () => {
+        // this is the base64 data
+        const fileRes = btoa(reader.result);
+        console.log(`data:image/jpg;base64,${fileRes}`);
+        setPreview1(`data:image/jpg;base64,${fileRes}`);
+      };
+  
+      reader.onerror = () => {
+        console.log("There is a problem while uploading...");
+      };
+    }
     function uploadFile(file) {
       const reader = new FileReader();
       reader.readAsBinaryString(file);
@@ -53,36 +75,71 @@ const [preview, setPreview] = React.useState("");
       };
     }
   
-
+ 
   return (
 <div className={styles.container}>
+
     <div className={styles.subContainer}>
+    <>
         <div 
-        onDragEnter={(e) => handleEnter(e)}
-        onDragLeave={(e) => handleLeave(e)}
-        onDragOver={(e) => handleOver(e)}
-        onDrop={(e) => handleUpload(e)}
+        onDragOver={(f) => handleOver(f)}
+        onDrop={(f) => handleUpload(f)}
         className={styles.frame}
         style={{ backgroundImage: `url(${preview})` }}>
-        
+        <form class="my-form">
+            {!drop && (
+                   <p>Drag and Drop image here</p>
+            )}
+          </form>
         </div>
+        </>
+        <>
+        <div 
+        onDragOver={(f) => handleOver(f)}
+        onDrop={(f) => handleUpload(f)}
+        className={styles.frame}
+        style={{ backgroundImage: `url(${preview})` }}>
+        <form class="my-form">
+            {!drop && (
+                   <p>Drag and Drop image here</p>
+            )}
+          </form>
+        </div>
+        </>
 
-        <div className={styles.frame}>
-        <img src={nalfgas} className={styles.image} height="200px" width="200px" alt="nalfgas"/>
-        </div>
     </div>
     <div className={styles.Container2}>
-        <div className={styles.frame1}>
-        <img src={nalfgas} className={styles.image} height="200px" width="200px" alt="nalfgas"/>
+       <>
+        <div 
+        onDragOver={(e) => handleOver1(e)}
+        onDrop={(e) => handleUpload1(e)}
+        className={styles.frame}
+        style={{ backgroundImage: `url(${preview1})` }}>
+        <form class="my-form">
+            {!drop && (
+                   <p>Drag and Drop image here</p>
+            )}
+          </form>
         </div>
+        </>
 
-        <div className={styles.frame1}>
-        <img src={nalfgas} className={styles.image} height="200px" width="200px" alt="nalfgas"/>
+        <>
+        <div 
+        onDragOver={(e) => handleOver1(e)}
+        onDrop={(e) => handleUpload1(e)}
+        className={styles.frame}
+        style={{ backgroundImage: `url(${preview1})` }}>
+        <form class="my-form">
+            {!drop && (
+                   <p>Drag and Drop image here</p>
+            )}
+          </form>
         </div>
+        </>
     </div>
     <>
     <div className={style.uploadButton}>
-            <button className={style.button}>Upload Here 
+            <button className={style.button}>Upload new file here 
                 <input
                   type="file"
                   className={style.uploadFile}
@@ -92,8 +149,8 @@ const [preview, setPreview] = React.useState("");
               </button>
 
               
-            </div>
-    </>
+            </div></>
+    
 </div>
   )
 }
