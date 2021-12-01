@@ -10,7 +10,10 @@ import StylingComponentsExercice from 'exercices/StylingComponents'
 import Grille from "../exercices/Imageworker";
 import ContextsExercice from 'exercices/Contexts'
 import UploaderI from 'exercices/UploaderI'
+import Storer from 'exercices/Storer'
+import V1 from 'exercices/v1'
 import Coor from '../cursorCoor';
+
 
 
 function App() {
@@ -43,6 +46,12 @@ function App() {
         </Route>
         <Route exact path="/uploaderI">
           <UploaderI />
+        </Route>
+        <Route exact path="/storer">
+          <Storer />
+        </Route>
+        <Route exact path="/v1">
+          <V1 />
         </Route>
         <Route exact path="/">
           404
