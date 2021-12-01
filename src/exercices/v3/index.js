@@ -1,6 +1,7 @@
 import React from 'react';
 import DropZone from './dropZone';
 import styli from './dropZone.module.css';
+//var localStorageKey = '_moodboard';
 
 const Grille= () => {
 const [cards, setCard] = React.useState([]);
@@ -24,3 +25,4 @@ const [cards, setCard] = React.useState([]);
 }
 
 export default Grille;
+ 

@@ -1,2 +1,2 @@
-import styles from './UploaderII.module.css'
-export {default} from "./UploaderII"
+import styles from './UStorer.module.css'
+export {default} from "./storer.js"

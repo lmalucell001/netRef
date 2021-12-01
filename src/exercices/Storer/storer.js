@@ -1,5 +1,3 @@
-import React from 'react'
-import styles from './storer.module.css'
 var localStorageKey = '_dugurlu_recipes';
 
 // write and read with local storage
@@ -10,12 +8,12 @@ class Recipe extends React.Component {
   constructor() {
     super();
     this.state = {
-      showModal: false 
+      showModal: false
     };
   }
 
-  editRecipe(index, name, ingredients) {
-    this.props.showDialog(name, ingredients, index);
+  editRecipe(index, name) {
+    this.props.showDialog(name, index);
   }
 
   handleEdit() {
@@ -31,25 +29,19 @@ class Recipe extends React.Component {
 
     return (
       <article>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <a href={'#' + collapseId} data-toggle='collapse' data-target={'#'+collapseId}>
+        <div>
+          <div>
               <h4 className="panel-title">
                 {this.props.name}
               </h4>
-            </a>
+            
           </div>
-          <div id={collapseId} className="panel-collapse collapse">
-            <ul className="list-group">
-              {this.props.ingredients.map(function(el){
-                return (<li className="list-group-item">{el}</li>)
-              })}
-            </ul>
+          <div>
             <button className="btn btn-danger" 
               id={"delete" + this.props.index}
               onClick={this.handleDelete.bind(this, this.props.index)}>Delete</button>
             <button className="btn btn-primary"
-              onClick={this.editRecipe.bind(this, this.props.index, this.props.name, this.props.ingredients)}>Edit</button>
+              onClick={this.editRecipe.bind(this, this.props.index, this.props.name)}>Edit</button>
           </div>
         </div>
       </article>
@@ -61,14 +53,11 @@ class RecipeBox extends React.Component {
   constructor() {
     super();
     var recipes = JSON.parse(localStorage.getItem(localStorageKey)) || [{
-      name: 'Pumpkin Pie',
-      ingredients: ['Pumpkin Puree', 'Sweetened Condensed Milk', 'Eggs', 'Pumpkin Pie Spice', 'Pie Crust']
+      name: 'Pumpkin Pie'
     }, {
-      name: 'Spaghetti',
-      ingredients: ['Noodles', 'Tomato Sauce', '(Optional) Meatballs']
+      name: 'Spaghetti'
     }, {
-      name: 'Onion Soup',
-      ingredients: ['Onions', 'Water']
+      name: 'Onion Soup'
     }];
     this.state = {
       recipes: recipes,
@@ -88,8 +77,7 @@ class RecipeBox extends React.Component {
     var recipeElements = [];
     for (var i = 0; i < this.state.recipes.length; i++) {
       recipeElements.push(
-        <Recipe name={this.state.recipes[i].name}
-          ingredients={this.state.recipes[i].ingredients} index={i}
+        <Recipe name={this.state.recipes[i].name} index={i}
           deleteRecipe={this.deleteChildRecipe.bind(this)}
           showDialog={this.showDialog.bind(this)}
         />);
@@ -107,11 +95,7 @@ class RecipeBox extends React.Component {
             <label for="recipeName">Recipe Name</label>
             <input className="form-control" type="text" placeholder="Recipe" id="recipeName" autofocus />
           </div>
-          <div className="input-group">
-            <label for="recipeIngredients">Ingredients</label>
-            <textarea className="form-control" rows="2" placeholder="Ingredients, separated by commas" id="recipeIngredients" ></textarea>
-          </div>
-          <button className="btn btn-default" type="button" onClick={this.handleEvent.bind(this)}>Save</button>
+         <button className="btn btn-default" type="button" onClick={this.handleEvent.bind(this)}>Save</button>
           <button className="btn btn-danger" type="button" onClick={this.closeDialog.bind(this)}>Cancel</button>
         </dialog>
       </div>
@@ -120,10 +104,8 @@ class RecipeBox extends React.Component {
 
   handleEvent(event) {
     var rName = document.getElementById('recipeName').value;
-    var rIngredients = document.getElementById('recipeIngredients').value.replace(" ", "").trim().split(",");
     const newRecipe = {
-      name: rName,
-      ingredients: rIngredients
+      name: rName
     };
     const newState = this.state;
     
@@ -140,9 +122,8 @@ class RecipeBox extends React.Component {
     this.closeDialog();
   }
 
-  showDialog(name, ingredients, index) {
-    var dialog = document.querySelector('dialog');
-    if(ingredients) {    document.getElementById('recipeIngredients').value = ingredients.join(', ');}
+  showDialog(name, index) {
+    var dialog = document.querySelector('dialog');}
     if(name && !name.target) {    document.getElementById('recipeName').value = name;}
     if(index) {
       const newState = this.state;
@@ -158,7 +139,6 @@ class RecipeBox extends React.Component {
     newState.editing = false;
     newState.editIndex = -1;
     this.setState(newState);
-    document.getElementById('recipeIngredients').value = "";
     document.getElementById('recipeName').value = "";
     var dialog = document.querySelector('dialog');
     dialog.close();

@@ -13,6 +13,7 @@ import UploaderI from 'exercices/UploaderI'
 import Storer from 'exercices/Storer'
 import V1 from 'exercices/v1'
 import V2 from 'exercices/v2'
+import V3 from 'exercices/v3'
 import Coor from '../cursorCoor';
 
 
@@ -56,6 +57,9 @@ function App() {
         </Route>
         <Route exact path="/v2">
           <V2 />
+        </Route>
+        <Route exact path="/v3">
+          <V3 />
         </Route>
         <Route exact path="/">
           404
