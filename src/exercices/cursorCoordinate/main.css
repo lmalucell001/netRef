@@ -1,9 +1,0 @@
-:root{
-    --coorX:0;
-    --coorY:0;
-}
-.testcoo{
-    color: chocolate;
-    position: absolute;
-    top: var(--coorY); left: var(--coorX);
-}

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 
@@ -10,12 +9,8 @@ import StylingComponentsExercice from 'exercices/StylingComponents'
 import Grille from "../exercices/Imageworker";
 import ContextsExercice from 'exercices/Contexts'
 import Uploader from 'exercices/Uploader'
-import Capture from "../exercices/cursorCoordinate";
 
 function App() {
-  useEffect(() => {
-    const color = getComputedStyle(document.documentElement).getPropertyValue('--coorX')
-    console.log('color') },[]);
   return (
     <BrowserRouter>
       <Header />
@@ -43,10 +38,6 @@ function App() {
         </Route>
         <Route exact path="/imageworker">
           <Grille />
-          <button onClick={this.useEffect.bind(this)}>
-              Button!
-          </button>
-          <Capture/>
         </Route>
         
       </Switch>
