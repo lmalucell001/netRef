@@ -5,6 +5,13 @@
     align-items: center;
     justify-content: center;
 }
+.container2{
+    position: absolute;
+    top: var(--coorY);
+    left: var(--coorX);
+    width: 500px;
+    height: 500px;
+}
 .subContainer{
     display: block;
     flex-wrap: nowrap;
@@ -35,6 +42,15 @@
 .image{
     border-radius: 20%;
 }
+.Applogo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+.Applogo g {
+fill:var(--color-logo);
+}
+
 
 /* .coucou {
     background-color: blue;
