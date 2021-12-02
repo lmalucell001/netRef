@@ -9,19 +9,29 @@
 .framer {
     justify-content: center;
     display: flex;
+    max-width: 200em;
+    flex-wrap : wrap;
+    
+
+}
+.frameholder {
+    justify-content: center;
+    display: flex;
+    
 
 }
 
-.framer h1 {
+.frameholder h1 {
     text-align: center;
     color:#737373 ;
     font-size: 80px;
 }
 
 .frame {
-    margin: 2px;
-    width: 200px;
-    height: 200px;
+    margin: 5px;
+    min-width: 300px;
+    height: 300px;
     border-radius: 20%;
-    background-size: 200px ;
+    background-size: 300px ;
 }
+
