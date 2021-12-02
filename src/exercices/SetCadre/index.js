@@ -34,10 +34,14 @@ const SetCadre = () => {
     }
     const ondragging = (i,e) => {
         if (dragging) {
+            let g = e.clientX
+            let k = e.clientY
+            g = g-75
+            k = k-75
             let cla = ileft.slice()
-            let clb = ileft.slice()
-            cla[i] = e.clientX.toString()
-            clb[i] = e.clientY.toString()
+            let clb = itop.slice()
+            cla[i] = g.toString()
+            clb[i] = k.toString()
             setIleft(cla)
             setItop(clb)
         }
@@ -55,8 +59,8 @@ const SetCadre = () => {
     const onMouseDown = (e) => {
         let Y = e.clientY;
         let X = e.clientX;
-        Y = Y-250;
-        X = X-250;
+        Y = Y-75;
+        X = X-75;
         setItop([...itop, Y.toString()])
         setIleft([...ileft, X.toString()])
         console.log(itop);
@@ -69,7 +73,7 @@ const SetCadre = () => {
     }
 
     function removeDummy() {
-        if (cadres.length == 1) {
+        if (cadres.length === 1) {
             setCadres(["0"])
         }
         else {
@@ -105,7 +109,7 @@ const SetCadre = () => {
                 style={{ height: "100vh", width: "100%" }}>
                 {/* <img src={logo} alt="pas là" width="100px" style={{ position: "absolute", top: itop + "px", left: ileft + "px" }} /> */}
             </div>
-            <div>{cadres.map((cadre) => (<div onMouseDown={ondragStart} onMouseMove={(e) => ondragging(cadre,e)} onMouseUp={ondragEnd} style={{ height: "500px", width: "500px", backgroundColor: "red", position: "absolute", top: `${itop[cadre]}` + "px", left: `${ileft[cadre]}` + "px" }} ></div>))}
+            <div>{cadres.map((cadre) => (<div onMouseDown={ondragStart} onMouseMove={(e) => ondragging(cadre,e)} onMouseUp={ondragEnd} style={{ height: "150px", width: "150px", backgroundColor: "red", position: "absolute", top: `${itop[cadre]}` + "px", left: `${ileft[cadre]}` + "px" }} ></div>))}
             </div>
 
         </div>
