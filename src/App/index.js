@@ -17,14 +17,7 @@ import RecipeBox from '../exercices/Storer'
 import SetCadre from '../exercices/SetCadre'
 
 function App() {
-  useEffect(() => {
-    const color = getComputedStyle(document.documentElement).getPropertyValue('--color-logo')
-    console.log(color)
-  },[]);
-
-  function setColor(color){
-    document.documentElement.style.setProperty('--color-logo', color)
-  }
+  
   return (
     <BrowserRouter>
       <Header />
