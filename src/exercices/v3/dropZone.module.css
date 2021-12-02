@@ -9,7 +9,15 @@
 .framer {
     justify-content: center;
     display: flex;
+
 }
+
+.framer h1 {
+    text-align: center;
+    color:#737373 ;
+    font-size: 80px;
+}
+
 .frame {
     margin: 2px;
     width: 200px;

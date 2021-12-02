@@ -52,13 +52,7 @@ class Recipe extends React.Component {
 class RecipeBox extends React.Component {
   constructor() {
     super();
-    var recipes = JSON.parse(localStorage.getItem(localStorageKey)) || [{
-      name: 'Pumpkin Pie'
-    }, {
-      name: 'Spaghetti'
-    }, {
-      name: 'Onion Soup'
-    }];
+    var recipes = JSON.parse(localStorage.getItem(localStorageKey)) 
     this.state = {
       recipes: recipes,
       editing: false,

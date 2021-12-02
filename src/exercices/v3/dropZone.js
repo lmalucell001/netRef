@@ -41,7 +41,9 @@ const DropZone = ( props ) => {
     <div className={style.dropzone}
         onDragOver={(f) => handleOver(f)}
         onDrop={(f) => handleUpload(f)}
-    ></div>
+    >
+      
+    </div>
   )
 }
 
