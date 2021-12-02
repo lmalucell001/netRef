@@ -29,10 +29,19 @@ const Header = () => {
           <Link to="/storer" className={styles.menuItem}>Storer</Link>
         </li>
         <li>
-          <Link to="/uploader" className={styles.menuItem}>Uploader</Link>
+          <Link to="/uploaderI" className={styles.menuItem}>UploaderI</Link>
         </li>
         <li>
           <Link to="/imageworker" className={styles.menuItem}>Imageworker</Link>
+        </li>
+        <li>
+          <Link to="/v1" className={styles.menuItem}>V1</Link>
+        </li>
+        <li>
+          <Link to="/v2" className={styles.menuItem}>V2</Link>
+        </li>
+        <li>
+          <Link to="/v3" className={styles.menuItem}>V3</Link>
         </li>
       </ul>
     </div>

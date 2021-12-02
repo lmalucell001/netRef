@@ -1,0 +1,35 @@
+
+
+.uploadButton {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.uploadFile {
+  width: 200%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 200%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #101010;
+  border: 0;
+}

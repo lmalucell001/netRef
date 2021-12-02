@@ -9,8 +9,14 @@ import FirstComponentExercice from 'exercices/FirstComponent'
 import StylingComponentsExercice from 'exercices/StylingComponents'
 import Grille from "../exercices/Imageworker";
 import ContextsExercice from 'exercices/Contexts'
-import Uploader from 'exercices/Uploader'
+import UploaderI from 'exercices/UploaderI'
+import Storer from 'exercices/Storer'
+import V1 from 'exercices/v1'
+import V2 from 'exercices/v2'
+import V3 from 'exercices/v3'
 import Coor from '../cursorCoor';
+
+
 
 function App() {
   useEffect(() => {
@@ -40,8 +46,20 @@ function App() {
         <Route exact path="/">
           <FirstComponentExercice />
         </Route>
-        <Route exact path="/uploader">
-          <Uploader />
+        <Route exact path="/uploaderI">
+          <UploaderI />
+        </Route>
+        <Route exact path="/storer">
+          <Storer />
+        </Route>
+        <Route exact path="/v1">
+          <V1 />
+        </Route>
+        <Route exact path="/v2">
+          <V2 />
+        </Route>
+        <Route exact path="/v3">
+          <V3 />
         </Route>
         <Route exact path="/">
           404

@@ -1,0 +1,19 @@
+.dropzone {
+    width : 100vw;
+    height : 100vh;
+    position: fixed;
+    top : 50px;
+    left : 0;
+    
+}
+.framer {
+    justify-content: center;
+    display: flex;
+}
+.frame {
+    margin: 2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background-size: 200px ;
+}

@@ -15,29 +15,19 @@
   background-position: center;
   background-size: cover;
 
-  .isDrop {
-    p {
-      opacity: 0;
-    }
-  }
   
-  p {
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out;
-  }
-
-  .isHighlight {
-    background-color: rgba(#4aa0ea, 0.5);
-
-    p {
-      opacity: 100; 
-    }
-  }
 
 
 }
+
+
+.upload p {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
 
 .uploadButton {
   width: 200px;
