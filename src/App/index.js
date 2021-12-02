@@ -5,10 +5,6 @@ import './App.css';
 import Header from "components/Header";
 
 // Exercices
-import FirstComponentExercice from 'exercices/FirstComponent'
-import StylingComponentsExercice from 'exercices/StylingComponents'
-import Grille from "../exercices/Imageworker";
-import ContextsExercice from 'exercices/Contexts'
 import UploaderI from 'exercices/UploaderI'
 import Storer from 'exercices/Storer'
 import V1 from 'exercices/v1'
@@ -31,21 +27,6 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/first-component">
-          <FirstComponentExercice />
-        </Route>
-        <Route exact path="/styling-components">
-          <StylingComponentsExercice />
-        </Route>
-        <Route exact path="/contexts">
-          <ContextsExercice />
-        </Route>
-        <Route exact path="/hooks">
-          Hooks
-        </Route>
-        <Route exact path="/">
-          <FirstComponentExercice />
-        </Route>
         <Route exact path="/uploaderI">
           <UploaderI />
         </Route>
