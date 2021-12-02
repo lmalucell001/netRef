@@ -1,7 +1,6 @@
 import React from 'react'
-import styles from './Uploader.module.css'
+import styles from './UploaderI.module.css'
 const Upload = () => {
-    const [highlight, setHighlight] = React.useState(false);
     const [preview, setPreview] = React.useState("");
     const [drop, setDrop] = React.useState(false);
   
@@ -9,30 +8,24 @@ const Upload = () => {
       e.preventDefault();
       e.stopPropagation();
       console.log("enter!");
-  
-      preview === "" && setHighlight(true);
     };
   
     const handleOver = (e) => {
       e.preventDefault();
       e.stopPropagation();
       console.log("over!");
-  
-      preview === "" && setHighlight(true);
     };
   
     const handleLeave = (e) => {
       e.preventDefault();
       e.stopPropagation();
       console.log("leave!");
-      setHighlight(false);
     };
   
     const handleUpload = (e) => {
       e.preventDefault();
       e.stopPropagation();
       console.log("drop!");
-      setHighlight(false);
       setDrop(true);
   
       const [file] = e.target.files || e.dataTransfer.files;
@@ -58,9 +51,7 @@ const Upload = () => {
   
 
 
-    // className={`upload${
-    //   highlight ? "isHighlight" : drop ?  "isDrop" : ""
-    // }`}
+     
 
     return ( 
       <>
@@ -69,11 +60,15 @@ const Upload = () => {
           onDragLeave={(e) => handleLeave(e)}
           onDragOver={(e) => handleOver(e)}
           onDrop={(e) => handleUpload(e)}
-          className={styles.upload.isDrop}
+          
+          className={styles.upload}
           style={{ backgroundImage: `url(${preview})` }}
         >
           <form class="my-form">
-            <p>Drag and Drop image here</p>
+            {!drop && (
+                   <p>Drag and Drop image here</p>
+            )}
+       
             <div className={styles.uploadButton}>
             <button className={styles.button}>Upload Here 
                 <input

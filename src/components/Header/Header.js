@@ -8,31 +8,22 @@ const Header = () => {
       Cours React
       <ul className={styles.menu}>
         <li>
-          <Link to="/first-component" className={styles.menuItem}>Premier composant</Link>
-        </li>
-        <li>
-          <Link to="/styling-components" className={styles.menuItem}>Styliser les composants</Link>
-        </li>
-        <li>
-          <Link to="/hooks" className={styles.menuItem}>Hooks</Link>
-        </li>
-        <li>
-          <Link to="/routing" className={styles.menuItem}>Routing</Link>
-        </li>
-        <li>
-          <Link to="/contexts" className={styles.menuItem}>Contexts</Link>
-        </li>
-        <li>
-          <Link to="/spotify" className={styles.menuItem}>Spotify</Link>
-        </li>
-        <li>
           <Link to="/storer" className={styles.menuItem}>Storer</Link>
         </li>
         <li>
-          <Link to="/uploader" className={styles.menuItem}>Uploader</Link>
+          <Link to="/uploaderI" className={styles.menuItem}>UploaderI</Link>
         </li>
         <li>
           <Link to="/imageworker" className={styles.menuItem}>Imageworker</Link>
+        </li>
+        <li>
+          <Link to="/v1" className={styles.menuItem}>V1</Link>
+        </li>
+        <li>
+          <Link to="/v2" className={styles.menuItem}>V2</Link>
+        </li>
+        <li>
+          <Link to="/v3" className={styles.menuItem}>V3 (whole)</Link>
         </li>
         <li>
           <Link to="/Setcadre" className={styles.menuItem}>Setcadre</Link>

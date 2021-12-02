@@ -1,0 +1,41 @@
+.dropzone {
+    width : 100vw;
+    height : 100vh;
+    position: fixed;
+    top : 50px;
+    left : 0;
+    
+}
+.framer {
+    justify-content: center;
+    display: flex;
+    max-width: 200em;
+    flex-wrap : wrap;
+    
+
+}
+.frameholder {
+    justify-content: center;
+    display: flex;
+    
+
+}
+
+.frameholder h1 {
+    text-align: center;
+    color:#737373 ;
+    font-size: 80px;
+}
+
+.frame {
+    justify-content: center;
+    
+}
+
+.frame img{
+    margin: 5px;
+    min-width: 300px;
+    border-radius: 2%;
+    
+}
+
