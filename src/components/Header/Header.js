@@ -23,7 +23,7 @@ const Header = () => {
           <Link to="/v2" className={styles.menuItem}>V2</Link>
         </li>
         <li>
-          <Link to="/v3" className={styles.menuItem}>V3</Link>
+          <Link to="/v3" className={styles.menuItem}>V3 (whole)</Link>
         </li>
       </ul>
     </div>

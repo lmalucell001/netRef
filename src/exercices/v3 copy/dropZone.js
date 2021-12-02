@@ -28,7 +28,7 @@ const DropZone = ( props ) => {
         reader.onload = () => {
           // this is the base64 data
           const fileRes = btoa(reader.result);
-          props.addCard(`data:image/jpg;base64,${fileRes}`);
+          props.addCard(`data:image/jpg;base64,${fileRes}`) 
           console.log(`data:image/jpg;base64,${fileRes}`);
         };
     

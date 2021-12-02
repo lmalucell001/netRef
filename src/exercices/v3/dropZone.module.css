@@ -28,10 +28,14 @@
 }
 
 .frame {
+    justify-content: center;
+    
+}
+
+.frame img{
     margin: 5px;
     min-width: 300px;
-    height: 300px;
-    border-radius: 20%;
-    background-size: 300px ;
+    border-radius: 2%;
+    
 }
 
