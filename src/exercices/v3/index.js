@@ -10,20 +10,21 @@ const [drop, setDrop] = React.useState(false);
     setCard([...cards, img])
     setDrop(true)
   }
+  
 
   console.log(cards)
 
   return (
+    <div>
     <div className={styli.framer}>
       {!drop && (
         <h1>Drag and Drop Here</h1>
       )}
-          <DropZone addCard={addCard} />
+          <DropZone addCard={addCard} />        
     {cards.map((card)=> (
       <div className={styli.frame} style={{ backgroundImage: `url(${card})` }}></div>
     ))}
-
-
+    </div>
     </div>
 
   )
