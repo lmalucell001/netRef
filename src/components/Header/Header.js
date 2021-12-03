@@ -5,16 +5,10 @@ import styles from './Header.module.css'
 const Header = () => {
   return (
     <div className={styles.header}>
-      Cours React
+      NetRef
       <ul className={styles.menu}>
         <li>
-          <Link to="/storer" className={styles.menuItem}>Storer</Link>
-        </li>
-        <li>
           <Link to="/uploaderI" className={styles.menuItem}>UploaderI</Link>
-        </li>
-        <li>
-          <Link to="/imageworker" className={styles.menuItem}>Imageworker</Link>
         </li>
         <li>
           <Link to="/v1" className={styles.menuItem}>V1</Link>
