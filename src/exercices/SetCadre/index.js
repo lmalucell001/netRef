@@ -49,12 +49,6 @@ const SetCadre = () => {
     const ondragEnd = () => {
         dragging = false;
     }
-
-    const testb = () => {
-        console.log(itop[3])
-        ileft.splice(4, 1, '300');
-        console.log(itop[3])
-    }
     
     const onMouseDown = (e) => {
         let Y = e.clientY;
@@ -103,7 +97,7 @@ const SetCadre = () => {
 
     return (
         <div>
-            <button onClick={removeDummy}>enlever la dernière div</button> <button onClick={rizète}>reset</button> <button onClick={testb}>test</button>
+            <button onClick={removeDummy}>enlever la dernière div</button> <button onClick={rizète}>reset</button>
             <div
                 onMouseDown={onMouseDown}
                 style={{ height: "100vh", width: "100%" }}>
