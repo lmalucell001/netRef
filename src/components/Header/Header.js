@@ -25,6 +25,9 @@ const Header = () => {
         <li>
           <Link to="/v3" className={styles.menuItem}>V3 (whole)</Link>
         </li>
+        <li>
+          <Link to="/v4" className={styles.menuItem}>V4 (ls)</Link>
+        </li>
       </ul>
     </div>
   )

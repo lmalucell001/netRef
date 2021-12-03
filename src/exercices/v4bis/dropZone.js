@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './dropZone.module.css';
 
+
 const DropZone = ( props ) => {
     
     console.log("jesuisla")
@@ -8,7 +9,7 @@ const DropZone = ( props ) => {
         f.preventDefault();
         f.stopPropagation();
         console.log("over!");
-      };
+      }; 
   
     
       const handleUpload = (f) => {
@@ -38,12 +39,29 @@ const DropZone = ( props ) => {
       }
   
   return (
+    <>
     <div className={style.dropzone}
         onDragOver={(f) => handleOver(f)}
         onDrop={(f) => handleUpload(f)}
     >
-      
     </div>
+    <div>
+      <>
+    <div className={style.uploadButton}>
+            <button className={style.button}>Upload new file here 
+                <input
+                  type="file"
+                  className={style.uploadFile}
+                  accept="image/*"
+                  onChange={(f) => handleUpload(f)}
+                />
+              </button>
+
+              
+            </div>
+            </>
+      </div>
+      </>
   )
 }
 

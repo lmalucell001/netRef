@@ -10,11 +10,14 @@ import Storer from 'exercices/Storer'
 import V1 from 'exercices/v1'
 import V2 from 'exercices/v2'
 import V3 from 'exercices/v3'
+import V4 from 'exercices/v4'
 import Coor from '../cursorCoor';
 
 
 
 function App() {
+
+  
   useEffect(() => {
     const color = getComputedStyle(document.documentElement).getPropertyValue('--color-logo')
     console.log(color)
@@ -41,6 +44,9 @@ function App() {
         </Route>
         <Route exact path="/v3">
           <V3 />
+        </Route>
+        <Route exact path="/v4">
+          <V4 />
         </Route>
         <Route exact path="/">
           404

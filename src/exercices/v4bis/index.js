@@ -1,6 +1,6 @@
 import React from 'react';
 import DropZone from './dropZone';
-import styli from './dropZone.module.css';
+import style from './dropZone.module.css';
 //var localStorageKey = '_moodboard';
 
 const Grille= () => {
@@ -14,23 +14,24 @@ const [drop, setDrop] = React.useState(false);
   
 
   console.log(cards)
-
+ 
   return (
     <div>
-    <div className={styli.frameholder}>
+    <div className={style.frameholder}>
       {!drop && (
         <h1>Drag and Drop Here</h1>
       )}
           <DropZone addCard={addCard} />  
-          <div className={styli.framer}>  
+          <div className={style.framer}>  
       {cards.map((card)=> (
-        <div className={styli.frame}> 
+        <div className={style.frame}> 
           <img src={card} width="300px" alt=""/>
         </div>
       ))}
   
     </div>
     </div>
+    
     </div>
 
   )
