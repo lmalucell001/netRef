@@ -12,6 +12,7 @@ import V2 from 'exercices/v2'
 import V3 from 'exercices/v3'
 import V4 from 'exercices/v4'
 import Coor from '../cursorCoor';
+import SetCadre from '../exercices/SetCadre';
 
 
 
@@ -59,6 +60,9 @@ function App() {
             <button onClick={() => setColor('blueviolet')}>violet</button>
           </p>
           
+        </Route>
+        <Route exact path="/setcadre">
+          <SetCadre/>
         </Route>
         
       </Switch>

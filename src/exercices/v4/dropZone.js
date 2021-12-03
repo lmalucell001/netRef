@@ -4,24 +4,6 @@ import style from './dropZone.module.css';
 
 const DropZone = ( props ) => {
 
-        /*const [numero, setNumero] = useState('');
-        const [top, setTop] = useState('');
-        const [left, setLeft] = useState('');
-        const [pict, setPict] = useState('');*/
-/*
-        const handle = () => {
-          localStorage.setItem('Numero', numero);
-          localStorage.setItem('Top', top);
-          localStorage.setItem('Left', left);
-          localStorage.setItem('Pict', pict);
-        };*/
-        /*
-        const remove = () => {
-          localStorage.removeItem('Numero');
-          localStorage.removeItem('Top');
-          localStorage.removeItem('Left');
-          localStorage.removeItem('Pict');
-        };*/
 
         const handleOver = (f) => {
           f.preventDefault();
@@ -48,7 +30,7 @@ const DropZone = ( props ) => {
           // this is the base64 data
           const fileRes = btoa(reader.result);
           props.addCard(`data:image/jpg;base64,${fileRes}`);
-          console.log(`data:image/jpg;base64,${fileRes}`);
+          console.log("dans dropzone", `data:image/jpg;base64,${fileRes}`);
         };
     
         reader.onerror = () => {
