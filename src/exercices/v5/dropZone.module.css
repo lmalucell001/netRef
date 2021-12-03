@@ -7,16 +7,16 @@
     
 }
 .framer {
-    /* justify-content: center;
+    justify-content: center;
     display: flex;
     max-width: 200em;
-    flex-wrap : wrap; */
+    flex-wrap : wrap;
     
 
 }
 .frameholder {
-    /* justify-content: center;
-    display: flex; */
+    justify-content: center;
+    display: flex;
     
 
 }
@@ -28,7 +28,7 @@
 }
 
 .frame {
-    /* justify-content: center; */
+    justify-content: center;
     
 }
 

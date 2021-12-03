@@ -44,11 +44,12 @@ const Grille= () => {
 //     setCadres([...cadres, number.toString()])
 //     //up are the new ones
 console.log("left", photoMovable.ileft, "top", photoMovable.itop)
-    photoMovable.img = img
-    photoMovable.ileft = e.clientx
-    photoMovable.itop = e.clientY
-    photoMovable.ileft = e.clientx
-    setAlbum([...album, photoMovable])
+    photoMovable.img = img;
+
+    
+    photoMovable.itop = e.clientY;
+    photoMovable.ileft = e.clientX;
+    setAlbum([...album, photoMovable]);
     setFirst(false)
     setDrop(true)
     console.log("drop", drop)
