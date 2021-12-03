@@ -13,6 +13,7 @@ import V3 from 'exercices/v3'
 import V4 from 'exercices/v4'
 import Coor from '../cursorCoor';
 import SetCadre from '../exercices/SetCadre';
+import V5 from 'exercices/v5'
 
 
 
@@ -63,6 +64,9 @@ function App() {
         </Route>
         <Route exact path="/setcadre">
           <SetCadre/>
+        </Route>
+        <Route exact path="/v5">
+          <V5/>
         </Route>
         
       </Switch>

@@ -14,7 +14,7 @@ const SetCadre = () => {
     const [cadres, setCadres] = React.useState(["0"])
     const [number, setNumber] = React.useState(1)
     var dragging = new Boolean(false)
-    const cadro = useRef(0)
+    const cadro = useRef(0) 
 
     const addCadres = () => {
         setNumber(prevNumber => prevNumber + 1)

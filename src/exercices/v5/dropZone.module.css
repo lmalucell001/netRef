@@ -1,0 +1,75 @@
+.dropzone {
+    width : 100vw;
+    height : 100vh;
+    position: fixed;
+    top : 50px;
+    left : 0;
+    
+}
+.framer {
+    /* justify-content: center;
+    display: flex;
+    max-width: 200em;
+    flex-wrap : wrap; */
+    
+
+}
+.frameholder {
+    /* justify-content: center;
+    display: flex; */
+    
+
+}
+
+.frameholder h1 {
+    text-align: center;
+    color:#737373 ;
+    font-size: 80px;
+}
+
+.frame {
+    /* justify-content: center; */
+    
+}
+
+.frame img{
+    margin: 5px;
+    min-width: 300px;
+    border-radius: 2%;
+    
+}
+
+.uploadButton {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .uploadFile {
+    width: 200%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #101010;
+    border: 0;
+  }
+  

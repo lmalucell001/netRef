@@ -31,6 +31,9 @@ const Header = () => {
         <li>
           <Link to="/Setcadre" className={styles.menuItem}>Setcadre</Link>
         </li>
+        <li>
+          <Link to="/v5" className={styles.menuItem}>v5 (fusion)</Link>
+        </li>
       </ul>
     </div>
   )
