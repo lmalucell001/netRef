@@ -92,4 +92,4 @@ Exemple : si on crée un fichier `public/image.jpg`, alors ce fichier sera acces
 - On utilise [Craco](https://github.com/gsoft-inc/craco) pour configurer CRA, via le fichier `craco.config.js` présent à la racine du projet. [Documentation](https://github.com/gsoft-inc/craco/blob/master/packages/craco/README.md#configuration)
 
 ### Webpack
-- [Documentation](https://webpack.js.org/)
+- [Documentation](https://webpack.js.org/)# GabrielsFunkyFilter
